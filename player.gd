@@ -67,6 +67,9 @@ func _process(delta):
 	line2.add_point(Vector2.ZERO)
 	line2.add_point(slow_line)
 	
+	if Input.is_action_just_pressed("Debug"):
+		line.visible = !line.visible
+		
 	print("collision: ", ray.is_colliding())
 	print("end point: ", endpoint)
 	print("start_point: ", global_position)
